@@ -22,13 +22,13 @@ Trabalho Final de Engenharia de Software
 Desenvolver uma solução de Software para Controle de Estoque, aplicando os conteúdos da disciplina ao longo do semestre.
 
 ### Entregas Incrementais:
-- processos de software;
-- requisitos;
-- modelagem;
-- princípios de projeto;
-- padrões de projeto;
-- arquitetura de software;
-- testes;
+- Processos de Software;
+- Requisitos;
+- Modelagem;
+- Princípios de Projeto;
+- Padrões de Projeto;
+- Arquitetura de Software;
+- Testes do Projeto;
 
 ---
 
@@ -64,12 +64,12 @@ Desenvolver uma solução de Software para Controle de Estoque, aplicando os con
 ---
 
 ## 04. Fluxo do Trabalho:
-- Visão do produto
+- Visão do Produto
 - Product Backlog
 - Sprint Backlog
-- Registro de planejamento das sprints
-- Registro de revisão/retrospectiva
-- Documentação técnica incremental
+- Registro de Planejamento das Sprints
+- Registro de Revisão/Retrospectiva
+- Documentação Técnica Incremental
 
 ---
 
