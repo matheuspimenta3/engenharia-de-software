@@ -1,13 +1,11 @@
 # Problema e Visão do Produto
 
-# 01. Problema e Visão do Produto
+`Controle de Estoque`
 
-**Título do problema:** `Controle de Estoque`
-
-**Descrição resumida do problema:**  
+**Descrição Resumida do Problema:**  
 Muitos pequenos comércios e empreendimentos ainda realizam o controle de estoque de forma manual, por meio de anotações em papel, planilhas desatualizadas ou conferências visuais. Isso dificulta o acompanhamento da entrada e saída de produtos, aumenta a chance de erros, perdas, desperdícios e falta de itens importantes para o funcionamento do negócio.
 
-**Justificativa da escolha:**  
+**Justificativa da Escolha:**  
 O grupo escolheu esse problema por ser comum em diversos tipos de estabelecimentos e por representar uma necessidade real de organização e controle. Além disso, é um tema adequado para aplicação prática dos conceitos da disciplina, permitindo trabalhar requisitos, modelagem, arquitetura, testes e evolução incremental do produto.
 
 ---
@@ -27,16 +25,16 @@ O grupo escolheu esse problema por ser comum em diversos tipos de estabeleciment
 
 ---
 
-## 3. Visão do produto
-**Nome da solução:** `Sistema de Controle de Estoque`
+## 3. Visão do Produto
+`Sistema de Controle de Estoque`
 
-**Proposta de valor:**  
+**Proposta de Valor:**  
 Oferecer uma solução simples e eficiente para registrar, acompanhar e gerenciar produtos em estoque, permitindo mais controle, segurança das informações e agilidade nas operações do dia a dia.
 
-**Objetivo geral da solução:**  
+**Objetivo Geral da Solução:**  
 Desenvolver um sistema web para auxiliar no controle de estoque, permitindo o cadastro de produtos e o acompanhamento de movimentações de entrada e saída.
 
-**Objetivos específicos:**
+**Objetivos Específicos:**
 - Permitir o cadastro, edição, consulta e exclusão de produtos.
 - Registrar movimentações de entrada e saída de itens no estoque.
 - Exibir informações atualizadas sobre quantidades disponíveis e alertas de baixo estoque.
@@ -52,29 +50,29 @@ Desenvolver um sistema web para auxiliar no controle de estoque, permitindo o ca
 
 ---
 
-## 5. Escopo inicial
+## 5. Escopo Inicial
 ### Inclui
 - Cadastro de produtos
 - Registro de entrada e saída de mercadorias
 - Consulta da quantidade disponível em estoque
 
-### Não inclui
+### Exclui
 - Integração com sistema de vendas ou financeiro
 - Aplicativo mobile na versão inicial
 
 ---
 
-## 6. Restrições e premissas
-**Restrições:**
+## 6. Restrições e Premissas
+### Restrições:
 - O sistema será desenvolvido conforme o cronograma e os conteúdos da disciplina.
 - A primeira versão terá foco nas funcionalidades essenciais de controle de estoque.
 
-**Premissas:**
+### Premissas:
 - Os usuários terão acesso à internet e a um navegador para utilizar o sistema.
 - As informações dos produtos serão cadastradas corretamente pelos usuários.
 
 ---
 
-## 7. Exemplo resumido
+## 7. Exemplo Final
 > Problema: dificuldade no controle manual de produtos e movimentações em estoque.  
 > Solução proposta: sistema web para cadastro de produtos, registro de entradas e saídas e acompanhamento das quantidades disponíveis, com foco em organização, agilidade e redução de erros.
