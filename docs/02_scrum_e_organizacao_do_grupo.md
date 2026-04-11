@@ -2,7 +2,7 @@
 
 ## 1. Integrantes
 
-| Nome | Papel no Scrum | Responsabilidades principais |
+| Nome | Papel | Responsabilidades |
 |---|---|---|
 | Alexandre Bortone | Product Owner | Definir prioridades do backlog, representar a visão do produto, validar as entregas e alinhar as necessidades do projeto |
 | Matheus Freire Costa Pimenta | Scrum Master | Organizar as sprints, acompanhar o andamento das tarefas, remover impedimentos e garantir o uso coerente do Scrum |
