@@ -5,9 +5,9 @@
 | Nome | Papel | Responsabilidades |
 |---|---|---|
 | Alexandre Bortone | Product Owner | Definir prioridades do backlog, representar a visão do produto, validar as entregas e alinhar as necessidades do projeto |
-| Matheus Freire Costa Pimenta | Scrum Master | Organizar as sprints, acompanhar o andamento das tarefas, remover impedimentos e garantir o uso coerente do Scrum |
-| Lucas Marcelino Neves | Dev Team | Levantar requisitos, colaborar na modelagem e desenvolver as entregas técnicas e documentais |
-| Mark Leite Sa | Dev Team | Apoiar no desenvolvimento, revisar materiais, contribuir com testes e evolução incremental da solução |
+| Matheus Pimenta | Scrum Master | Organizar as sprints, acompanhar o andamento das tarefas, remover impedimentos e garantir o uso coerente do Scrum |
+| Lucas Neves | Dev Team | Levantar requisitos, colaborar na modelagem e desenvolver as entregas técnicas e documentais |
+| Mark Sa | Dev Team | Apoiar no desenvolvimento, revisar materiais, contribuir com testes e evolução incremental da solução |
 
 ---
 
