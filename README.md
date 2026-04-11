@@ -10,13 +10,25 @@ Trabalho Final de Engenharia de Software
 **Docente:**
 
 ### Integrantes do Grupo:
-- Matheus Freire Costa Pimenta
+- Alexandre Bortone - Product Owner / Time de Desenvolvimento;
+- Matheus Freire Costa Pimenta - Scrum Master / Time de Desenvolvimento;
+- Lucas Marcelino Neves - Time de Desenvolvimento;
+- Mark Leite Sa - Time de Desenvolvimento;
 
 
 ---
 
 ## 02. Objetivo do Trabalho:
+Desenvolver uma solução de Software para Controle de Estoque, aplicando os conteúdos da disciplina ao longo do semestre.
 
+### Entregas Incrementais:
+- processos de software;
+- requisitos;
+- modelagem;
+- princípios de projeto;
+- padrões de projeto;
+- arquitetura de software;
+- testes.
 
 ---
 
@@ -53,7 +65,12 @@ Trabalho Final de Engenharia de Software
 ---
 
 ## 04. Fluxo do Trabalho:
-
+- Visão do produto
+- Product Backlog
+- Sprint Backlog
+- Registro de planejamento das sprints
+- Registro de revisão/retrospectiva
+- Documentação técnica incremental
 
 ---
 
