@@ -18,8 +18,8 @@
 **Ferramentas Adotadas:**
 - GitHub;
 - GitHub Projects;
+- Google Meet;
 - WhatsApp;
-- Google Meet.
 
 **Ritual de Planejamento:**  
 No início de cada sprint, o grupo definirá os itens prioritários do backlog, dividirá as atividades em tarefas menores e distribuirá as responsabilidades entre os integrantes.
