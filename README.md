@@ -4,13 +4,9 @@ Trabalho Final de Engenharia de Software
 ---
 
 ## 01. Identificação do Projeto:
-
 **Nome do projeto::** Engenharia de Software
-
 **Problema escolhido:** Controle de Estoque
-
 **Turma/Semestre:** 2026/01 - 14A
-
 **Docente:** Johnatan Alves de Oliveira
 
 ### Integrantes do Grupo:
