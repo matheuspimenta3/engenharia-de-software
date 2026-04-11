@@ -1,6 +1,5 @@
 # Problema e Visão do Produto
-
-`Controle de Estoque`
+`Sistema de Controle de Estoque`
 
 **Descrição Resumida do Problema:**  
 Muitos pequenos comércios e empreendimentos ainda realizam o controle de estoque de forma manual, por meio de anotações em papel, planilhas desatualizadas ou conferências visuais. Isso dificulta o acompanhamento da entrada e saída de produtos, aumenta a chance de erros, perdas, desperdícios e falta de itens importantes para o funcionamento do negócio.
@@ -26,7 +25,7 @@ O grupo escolheu esse problema por ser comum em diversos tipos de estabeleciment
 ---
 
 ## 3. Visão do Produto
-`Sistema de Controle de Estoque`
+**Nome da solução:** Sistema de Controle de Estoque
 
 **Proposta de Valor:**  
 Oferecer uma solução simples e eficiente para registrar, acompanhar e gerenciar produtos em estoque, permitindo mais controle, segurança das informações e agilidade nas operações do dia a dia.
