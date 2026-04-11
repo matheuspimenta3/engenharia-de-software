@@ -25,7 +25,7 @@ O grupo escolheu esse problema por ser comum em diversos tipos de estabeleciment
 ---
 
 ## 3. Visão do Produto
-**Nome da solução:** Sistema de Controle de Estoque
+**Nome da Solução:** Sistema de Controle de Estoque
 
 **Proposta de Valor:**  
 Oferecer uma solução simples e eficiente para registrar, acompanhar e gerenciar produtos em estoque, permitindo mais controle, segurança das informações e agilidade nas operações do dia a dia.
