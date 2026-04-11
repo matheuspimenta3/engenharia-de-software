@@ -4,10 +4,10 @@ Trabalho Final de Engenharia de Software
 ---
 
 ## 01. Identificação do Projeto:
-**Nome do projeto::** 
-**Problema escolhido:**
-**Turma/Semestre:**
-**Docente:**
+**Nome do projeto::** Engenharia de Software
+**Problema escolhido:** Controle de Estoque
+**Turma/Semestre:** 2026/01 - 14A
+**Docente:** Johnatan Alves de Oliveira
 
 ### Integrantes do Grupo:
 - Alexandre Bortone - Product Owner / Time de Desenvolvimento;
@@ -28,7 +28,7 @@ Desenvolver uma solução de Software para Controle de Estoque, aplicando os con
 - princípios de projeto;
 - padrões de projeto;
 - arquitetura de software;
-- testes.
+- testes;
 
 ---
 
@@ -61,7 +61,6 @@ Desenvolver uma solução de Software para Controle de Estoque, aplicando os con
     └── entrega_template.md
 ```
 
-
 ---
 
 ## 04. Fluxo do Trabalho:
@@ -75,34 +74,33 @@ Desenvolver uma solução de Software para Controle de Estoque, aplicando os con
 ---
 
 ## 05. Entregas:
-| Entrega | Foco principal | Arquivo-base |
+| Entrega | Foco Principal | Arquivo |
 |---|---|---|
-| Entrega 1 | Problema, visão do produto e organização do grupo | `docs/01_problema_e_visao_do_produto.md` e `docs/02_scrum_e_organizacao_do_grupo.md` |
-| Entrega 2 | Backlog e requisitos | `docs/03_product_backlog.md` e `docs/04_requisitos.md` |
-| Entrega 3 | Modelagem e decisões de projeto | `docs/05_modelagem.md` |
-| Entrega 4 | Arquitetura e padrões | `docs/06_arquitetura_e_projeto.md` e `docs/07_padroes_de_projeto.md` |
-| Entrega 5 | Estratégia de testes e evidências | `docs/08_testes.md` |
-| Entrega final | Consolidação e apresentação | `docs/09_entregas_incrementais.md` e `docs/10_apresentacao_final.md` |
+| Entrega 1 | Problema, Visão e Organização | `docs/01_problema_e_visao_do_produto.md` e `docs/02_scrum_e_organizacao_do_grupo.md` |
+| Entrega 2 | Backlog e Requisitos | `docs/03_product_backlog.md` e `docs/04_requisitos.md` |
+| Entrega 3 | Modelagem e Decisões | `docs/05_modelagem.md` |
+| Entrega 4 | Arquitetura e Padrões | `docs/06_arquitetura_e_projeto.md` e `docs/07_padroes_de_projeto.md` |
+| Entrega 5 | Estratégia de Testes e Evidências | `docs/08_testes.md` |
+| Entrega F | Consolidação e Apresentação | `docs/09_entregas_incrementais.md` e `docs/10_apresentacao_final.md` |
 
 ---
 
 ## 06. Informações Complementares:
 
 ### Boas Praticas:
-- commits frequentes e significativos;
-- clareza nos nomes de arquivos e versões;
-- documentação incremental;
-- backlog priorizado;
-- rastreabilidade entre problema, requisitos, modelagem, arquitetura e testes;
-- evidências de revisão e evolução do produto.
+- Commits frequentes e significativos;
+- Clareza nos nomes de arquivos e versões;
+- Documentação incremental;
+- Backlog priorizado;
+- Rastreabilidade entre problema, requisitos, modelagem, arquitetura e testes;
+- Evidências de revisão e evolução do produto.
 
 ### Critérios de Qualidade
-O repositório deve demonstrar:
-- organização;
-- completude;
-- uso coerente de Scrum;
-- aplicação dos conceitos da disciplina;
-- evolução incremental real;
-- autoria do grupo.
+- Organização;
+- Completude;
+- Uso coerente de Scrum;
+- Aplicação dos conceitos da disciplina;
+- Evolução incremental real;
+- Autoria do grupo.
 
 ### Licença de Uso:
