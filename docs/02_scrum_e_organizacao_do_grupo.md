@@ -7,7 +7,7 @@
 | Alexandre Bortone | Product Owner | Definir prioridades do backlog, representar a visão do produto, validar as entregas e alinhar as necessidades do projeto |
 | Matheus Pimenta | Scrum Master | Organizar as sprints, acompanhar o andamento das tarefas, remover impedimentos e garantir o uso coerente do Scrum |
 | Lucas Neves | Dev Team | Levantar requisitos, colaborar na modelagem e desenvolver as entregas técnicas e documentais |
-| Mark Sa | Dev Team | Apoiar no desenvolvimento, revisar materiais, contribuir com testes e evolução incremental da solução |
+| Mark Sa | Dev Team | Apoiar no desenvolvimento, revisar materiais, contribuir com testes e evolução incremental |
 
 ---
 
