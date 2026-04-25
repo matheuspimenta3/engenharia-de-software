@@ -68,7 +68,7 @@ O diagrama de sequência descreve a interação entre os componentes do sistema 
   5. A API atualiza o campo `qtd_atual` na tabela de `produtos`;
   6. O sistema retorna uma confirmação de sucesso (HTTP 201) para o usuário.
 
-![Diagrama de Sequência](./imagens/diagrama-sequencia.png)
+![Diagrama de Sequência](./imagens/diagrama-sequencia.jpg)
 
 
 ### 3. Modelo de Dados (DER)
