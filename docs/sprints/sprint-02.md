@@ -50,3 +50,12 @@ Definição das funcionalidades principais do sistema.
 ## 10. Pendencias para a proxima sprint
 - Criar diagramas UML
 - Relacionar requisitos com modelos
+
+## 11. Quadro Kanban
+
+| A Fazer | Em Andamento | Concluído |
+|:---|:---|:---|
+| Refinar backlog (Alexandre) | Criar histórias de usuário (Mattheus) | Levantar requisitos funcionais (Alexandre) |
+| Revisar requisitos (Mark) | | Levantar requisitos não funcionais (Alexandre) |
+| | | Criar Product Backlog (Alexandre) |
+| | | Definir critérios de aceitação (Lucas) |
