@@ -50,3 +50,13 @@ Definição estrutural do sistema com base nos modelos.
 ## 10. Pendencias para a proxima sprint
 - Definir arquitetura do sistema
 - Justificar decisões de projeto
+
+## 11. Quadro Kanban
+
+| A Fazer | Em Andamento | Concluído |
+|:---|:---|:---|
+| Revisar modelagem (Matheus) | | Criar diagrama de casos de uso (Lucas) |
+| Ajustar backlog (Alexandre) | | Criar diagrama de componentes (Lucas) |
+| | | Criar modelo de dados (Mark) |
+| | | Documentar modelagem (Alexandre) |
+| | | Criar diagrama de sequência (Mark)|
