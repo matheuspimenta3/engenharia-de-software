@@ -41,7 +41,7 @@ O diagrama de componentes representa a estrutura da aplicação web, evidenciand
 
 - Os diagramas foram desenvolvidos utilizando PlantUML.
 - A modelagem segue os requisitos funcionais definidos no backlog do projeto.
-- Foram aplicados os relacionamentos <<include>> e <<extend>> conforme a semântica UML.
+- Foram aplicados os relacionamentos include e extend conforme a semântica UML.
 
 ---
 
