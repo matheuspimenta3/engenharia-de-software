@@ -57,6 +57,6 @@ Definição inicial do sistema de controle de estoque.
 | A Fazer | Em Andamento | Concluído |
 |:---|:---|:---|
 | Planejar Sprint 2 (Matheus) | Definir stakeholders (Alexandre) | Definir problema (Alexandre) |
-| Organizar backlog inicial (Alexandre) | | Criar repositório GitHub (Matheus) |
+| | Organizar backlog inicial (Alexandre)  | Criar repositório GitHub (Matheus) |
 | | | Definir visão do produto (Lucas) |
 | | | Definir escopo inicial (Mark) |
