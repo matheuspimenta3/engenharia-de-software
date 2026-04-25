@@ -50,7 +50,7 @@ O diagrama de componentes representa a estrutura da aplicação web, evidenciand
 Diagramas desenvolvidos por: **Lucas Neves**
 
 
-### 8.4. Diagrama de Sequência
+### 3. Diagrama de Sequência
 
 O diagrama de sequência descreve a interação entre os componentes do sistema e a ordem cronológica das mensagens trocadas para realizar o registro de uma entrada de mercadoria.
 
@@ -68,18 +68,22 @@ O diagrama de sequência descreve a interação entre os componentes do sistema 
   5. A API atualiza o campo `qtd_atual` na tabela de `produtos`;
   6. O sistema retorna uma confirmação de sucesso (HTTP 201) para o usuário.
 
-![Diagrama de Sequência](./imagens/diagrama-sequencia.jpg)
+![Diagrama de Sequência](./imagens/diagrama-sequencia.png)
 
 
-### 3. Modelo de Dados (DER)
+### 4. Modelo de Dados (DER)
 
-O modelo de dados foi projetado para garantir a integridade das informações e o histórico de todas as operações realizadas no estoque. Ele utiliza um banco de dados relacional para conectar produtos, usuários e suas respectivas movimentações.
+O modelo relacional de dados apresenta a estrutura de persistência da aplicação, garantindo a integridade referencial e a organização das informações de produtos, estoque e movimentações.
 
-- **Principais Entidades:**
-  - **produtos:** Armazena os dados técnicos dos itens, como preço de custo, venda e a quantidade atual em estoque (`qtd_atual`).
-  - **movimentacoes:** Tabela central que registra cada entrada ou saída,
+- **Entidades principais:**
+  - `Produto`: Armazena os dados cadastrais dos itens.
+  - `Estoque`: Controla o saldo atual e os limites de segurança (estoque mínimo).
+  - `Movimentacao`: Registro histórico de todas as entradas e saídas.
+  - `Usuario`: Dados para autenticação e controle de acesso.
 
-![Diagrama de Sequência]./imagens/Modelo-de-Dados.png)
+![Diagrama de Sequência](./imagens/modelo-de-dados.png)
 
-feito por Mark Leite 
+##  Responsável
+
+Diagramas desenvolvidos por: **Mark Leite**
 
