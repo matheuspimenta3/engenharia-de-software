@@ -68,7 +68,7 @@ O diagrama de sequência descreve a interação entre os componentes do sistema 
   5. A API atualiza o campo `qtd_atual` na tabela de `produtos`;
   6. O sistema retorna uma confirmação de sucesso (HTTP 201) para o usuário.
 
-![Diagrama de Sequência](./imagens/diagrama-sequencia.png)
+![Diagrama de Sequência](./imagens/diagrama-de-sequencia.jpg)
 
 
 ### 4. Modelo de Dados (DER)
@@ -81,7 +81,7 @@ O modelo relacional de dados apresenta a estrutura de persistência da aplicaç�
   - `Movimentacao`: Registro histórico de todas as entradas e saídas.
   - `Usuario`: Dados para autenticação e controle de acesso.
 
-![Diagrama de Sequência](./imagens/modelo-de-dados.png)
+![Diagrama de Sequência](./imagens/modelo-de-dados.jpg)
 
 ##  Responsável
 
