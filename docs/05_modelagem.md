@@ -87,3 +87,26 @@ O modelo relacional de dados apresenta a estrutura de persistência da aplicaç�
 
 Diagramas desenvolvidos por: **Mark Leite**
 
+## 5. Relação entre Requisitos e Modelos
+
+| Requisito | Modelos Relacionados | Justificativa |
+|:---|:---|:---|
+| RF01 | Casos de Uso / Modelo de Dados | Representa cadastro de produtos |
+| RF02 | Sequência / Modelo de Dados | Mostra fluxo de entrada de estoque |
+| RF03 | Sequência / Modelo de Dados | Representa saída com validação |
+| RF04 | Casos de Uso | Mostra alerta de estoque |
+| RF05 | Casos de Uso / Componentes | Representa autenticação |
+| RF07 | Casos de Uso | Representa busca de produtos |
+| RF08 | Casos de Uso | Representa filtro por categoria |
+
+## 6. Refinamento do Backlog
+
+Durante a modelagem, foram identificadas melhorias no sistema:
+
+- Necessidade de validação mais detalhada nas saídas de estoque;
+- Inclusão de busca por nome de produto (RF07);
+- Inclusão de filtro por categoria (RF08);
+
+Essas melhorias foram incorporadas ao Product Backlog.
+
+
