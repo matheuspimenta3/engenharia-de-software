@@ -51,3 +51,12 @@ Definição inicial do sistema de controle de estoque.
 ## 10. Pendencias para a proxima sprint
 - Levantar requisitos
 - Criar backlog do produto
+
+## 11. Quadro Kanban
+
+| A Fazer | Em Andamento | Concluído |
+|:---|:---|:---|
+| Planejar Sprint 2 (Matheus) | Definir stakeholders (Alexandre) | Definir problema (Alexandre) |
+| Organizar backlog inicial (Alexandre) | | Criar repositório GitHub (Matheus) |
+| | | Definir visão do produto (Lucas) |
+| | | Definir escopo inicial (Mark) |
