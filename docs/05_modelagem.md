@@ -69,3 +69,17 @@ O diagrama de sequência descreve a interação entre os componentes do sistema 
   6. O sistema retorna uma confirmação de sucesso (HTTP 201) para o usuário.
 
 ![Diagrama de Sequência](./imagens/diagrama-sequencia.png)
+
+
+### 3. Modelo de Dados (DER)
+
+O modelo de dados foi projetado para garantir a integridade das informações e o histórico de todas as operações realizadas no estoque. Ele utiliza um banco de dados relacional para conectar produtos, usuários e suas respectivas movimentações.
+
+- **Principais Entidades:**
+  - **produtos:** Armazena os dados técnicos dos itens, como preço de custo, venda e a quantidade atual em estoque (`qtd_atual`).
+  - **movimentacoes:** Tabela central que registra cada entrada ou saída,
+
+![Diagrama de Sequência]./imagens/Modelo-de-Dados.png)
+
+feito por Mark Leite 
+
