@@ -77,7 +77,6 @@ O modelo relacional de dados apresenta a estrutura de persistência da aplicaç�
 
 - **Entidades principais:**
   - `Produto`: Armazena os dados cadastrais dos itens.
-  - `Estoque`: Controla o saldo atual e os limites de segurança (estoque mínimo).
   - `Movimentacao`: Registro histórico de todas as entradas e saídas.
   - `Usuario`: Dados para autenticação e controle de acesso.
 
