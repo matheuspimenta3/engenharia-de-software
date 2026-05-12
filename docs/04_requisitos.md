@@ -18,3 +18,4 @@
 | RNF02 | Persistência | Os dados devem ser armazenados em um banco de dados relacional. |
 | RNF03 | Responsividade | A interface deve ser adaptável para uso em desktops e tablets. |
 | RNF04 | Segurança | As senhas devem ser armazenadas utilizando algoritmos de hash (ex: BCrypt). |
+| RNF05 | Arquitetura Modular | O sistema deve possuir separação em camadas e módulos para facilitar manutenção e escalabilidade. |
