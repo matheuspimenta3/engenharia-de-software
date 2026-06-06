@@ -11,7 +11,7 @@ Apresentar os padrões de projeto considerados para a solução de Controle de E
 | Padrão | Onde será usado | Problema que resolve | Justificativa |
 |---|---|---|---|
 | Strategy | Regras de movimentação de estoque no Serviço de Estoque | Permite tratar diferentes tipos de movimentação com comportamentos distintos, sem concentrar muitas decisões condicionais em uma única classe | O sistema já possui registro de entrada e saída de mercadorias, e cada operação possui regras próprias, como somar saldo, validar disponibilidade e registrar motivo da saída |
-| Factory Method | Criação de objetos de movimentação no back-end | Centraliza a criação dos tipos de movimentação e reduz acoplamento entre controladores e regras de negócio | O sistema trabalha com diferentes operações sobre o estoque, como entrada e saída, e a fábrica permite criar essas estruturas de forma padronizada e preparada para expansão futura |
+| Repository Pattern | Camada de persistência e acesso aos dados | Isola a lógica de acesso ao banco de dados das regras de negócio | O projeto utiliza TypeORM e Clean Architecture, tornando necessário separar persistência e domínio para reduzir acoplamento e facilitar manutenção |
 | Observer | Atualização de alertas de estoque e possíveis notificações após movimentações | Permite que outros componentes reajam automaticamente a alterações no estoque sem depender de chamadas diretas entre módulos | Como o projeto prevê alerta de estoque baixo e geração de informações atualizadas após entradas e saídas, esse padrão ajuda a desacoplar a atualização do saldo da verificação de alertas |
 
 ---
@@ -30,17 +30,21 @@ O padrão Strategy será utilizado para separar as regras de movimentação de e
 Esse padrão melhora a organização da lógica de negócio, reduz o uso excessivo de estruturas condicionais e facilita a inclusão de novos tipos de movimentação no futuro.
 
 
-### Padrão: Factory Method
+### Padrão: Repository Pattern
 
-**Contexto:**  
-O sistema precisa criar objetos de movimentação de estoque conforme o tipo de operação solicitada. Como existem diferentes tipos de movimentação, essa criação pode acabar ficando espalhada em vários pontos do código.
+**Contexto:**
+O sistema precisa acessar informações de produtos, usuários e movimentações armazenadas no banco de dados PostgreSQL.
 
-**Aplicação no projeto:**  
-O padrão Factory Method será utilizado para centralizar a criação dos objetos de movimentação. Dessa forma, a escolha entre criar uma movimentação de entrada ou saída ficará concentrada em uma fábrica, evitando repetição de lógica na aplicação.
+**Aplicação no projeto:**
+O padrão Repository será utilizado para abstrair o acesso aos dados, permitindo que os casos de uso e serviços trabalhem apenas com contratos e não diretamente com o TypeORM.
 
-**Benefício esperado:**  
-Esse padrão reduz o acoplamento entre as camadas do sistema, melhora a organização do código e facilita futuras expansões, como a criação de novos tipos de movimentação.
+Exemplos:
+- ProductRepository;
+- UserRepository;
+- MovementRepository.
 
+**Benefício esperado:**
+Esse padrão reduz o acoplamento entre as regras de negócio e a tecnologia de persistência, facilita testes e mantém aderência aos princípios da Clean Architecture.
 
 ### Padrão: Observer
 
