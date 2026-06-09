@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserSchema } from 'src/infra/database/typeorm/schemas/user.schema';
-import { UserTypeOrmRepository } from 'src/infra/repositories/user.repository';
-import { UserController } from 'src/app/users/user.controller';
-import { CreateUserUseCase } from 'src/@core/use-cases/users/create-user.use-case';
+import { UserSchema } from '../infra/database/typeorm/schemas/user.schema';
+import { UserTypeOrmRepository } from '../infra/repositories/user.repository';
+import { UserController } from '../app/user.controller';
+import { CreateUserUseCase } from '../@core/usecases/users/create-user.use-case';
 
 @Module({
     imports: [

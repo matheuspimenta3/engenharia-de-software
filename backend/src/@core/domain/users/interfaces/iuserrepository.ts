@@ -1,4 +1,4 @@
-import { IRepositoryGeneric } from 'src/@core/domain/basic/irepository';
+import { IRepositoryGeneric } from '../../basic/irepository';
 import User from '../entitie/user.entitiy';
 
 

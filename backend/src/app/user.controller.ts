@@ -1,7 +1,6 @@
 import { Controller, Post, Body, Inject, ConflictException, BadRequestException } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
-import { CreateUserUseCase } from 'src/@core/use-cases/users/create-user.use-case';
-
+import { CreateUserUseCase } from '../@core/usecases/users/create-user.use-case';
 @Controller('users')
 export class UserController {
     constructor(
@@ -13,10 +12,14 @@ export class UserController {
     @Post()
     async create(@Body() createUserDto: CreateUserDto) {
         try {
-            // Repassa os dados validados do DTO diretamente para o Caso de Uso
-            return await this.createUserUseCase.execute(createUserDto);
+            // Garantimos que 'active' tenha um valor booleano padrão antes de enviar ao caso de uso
+            const userInput = {
+                ...createUserDto,
+                active: createUserDto.active ?? true, // Se for undefined, assume true
+            };
+
+            return await this.createUserUseCase.execute(userInput);
         } catch (error: any) {
-            // Traduz os erros de negócio do domínio para exceções HTTP do NestJS
             if (error.message.includes('já está sendo utilizado')) {
                 throw new ConflictException(error.message);
             }

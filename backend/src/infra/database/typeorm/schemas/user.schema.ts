@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable prettier/prettier */
 import { Entity, Column, PrimaryColumn } from 'typeorm';
-import { UserRole } from 'src/@core/domain/users/enums/enum.type.user';
+import { UserRole } from '../../../../@core/domain/users/enums/enum.type.user';
 
 @Entity({ name: 'users' })
 export class UserSchema {
@@ -25,7 +25,7 @@ export class UserSchema {
         enum: UserRole,
         default: UserRole.FUNCIONARIO, // Ou o valor padrão que fizer sentido para as suas regras
     })
-    role: UserRole;
+    role!: UserRole;
 
     @Column({ type: 'boolean', default: true })
     active!: boolean;

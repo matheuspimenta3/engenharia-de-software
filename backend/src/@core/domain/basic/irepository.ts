@@ -1,4 +1,4 @@
-import { PaginationDto } from "src/app/DTO's/pagination";
+import { PaginationDto } from '../../../app/dtos/pagination';
 
 
 export interface PagedResponse<T> {

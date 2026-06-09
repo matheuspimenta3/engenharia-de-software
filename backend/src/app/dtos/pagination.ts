@@ -1,4 +1,4 @@
-import { FilterDTO } from "src/@core/domain/basic/irepository";
+import { FilterDTO } from "../../../src/@core/domain/basic/irepository";
 
 export class PaginationDto {
   page: number = 1;

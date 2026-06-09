@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { IUserRepository } from 'src/@core/domain/users/interfaces/iuserrepository';
-import { UserInput } from 'src/@core/domain/users/input/user.input';
-import User from 'src/@core/domain/users/entitie/user.entitie';
+import { IUserRepository } from '../../domain/users/interfaces/iuserrepository';
+import { UserInput } from '../../domain/users/input/user.input';
+import User from '../../domain/users/entitie/user.entitiy';
 
 export class CreateUserUseCase {
     // Recebe a interface do repositório via construtor (Inversão de Dependência)

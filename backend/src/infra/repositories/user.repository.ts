@@ -2,10 +2,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DeepPartial } from 'typeorm';
-import { GenericRepository } from './abstracao/generic-repository';
-import User from 'src/@core/domain/users/entitie/user.entitiy'; // Mantendo o caminho/nome atual do seu projeto
+import { GenericRepository } from './abstractions/generic-repository';
+import User from '../../@core/domain/users/entitie/user.entitiy'; // Mantendo o caminho/nome atual do seu projeto
 import { UserSchema } from '../database/typeorm/schemas/user.schema';
-import { IUserRepository } from 'src/@core/domain/users/interfaces/iuserrepository';
+import { IUserRepository } from '../../@core/domain/users/interfaces/iuserrepository';
 
 @Injectable()
 export class UserTypeOrmRepository

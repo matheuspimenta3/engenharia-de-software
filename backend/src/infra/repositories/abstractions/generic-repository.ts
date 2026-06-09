@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { HttpException } from '@nestjs/common';
-import { Entity } from 'src/@core/domain/basic/entity';
-import { PagedResponse } from 'src/@core/domain/basic/irepository';
-import { PaginationDto } from 'src/app/DTO\'s/pagination';
+import { Entity } from '../../../@core/domain/basic/entity';
+import { PagedResponse } from '../../../@core/domain/basic/irepository';//'src/@core/domain/basic/irepository';
+import { PaginationDto } from '../../../app/dtos/pagination'; //'src/app/DTO\'s/pagination';
 import { DeepPartial, FindOptionsWhere, Repository } from 'typeorm';
 
 // Agora aceitamos a Entidade de Domínio (TDomain) e o Schema do Banco (TSchema)
