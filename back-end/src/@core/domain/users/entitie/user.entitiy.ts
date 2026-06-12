@@ -55,6 +55,13 @@ export default class User extends Entity<UserInput> {
     this.props.active = value;
   }
 
+  public get createdAt(): Date | undefined {
+    return this.props.createdAt;
+  }
+
+  public get updatedAt(): Date | undefined {
+    return this.props.updatedAt;
+  }
   toggleStatus() {
     this.active = !this.active;
   }
@@ -96,6 +103,8 @@ export default class User extends Entity<UserInput> {
       email: this.email,
       role: this.role,
       active: this.active,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
     };
   }
 
@@ -108,6 +117,8 @@ export default class User extends Entity<UserInput> {
       role: this.role,
       active: this.active,
       password: this.password,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
     };
   }
 }

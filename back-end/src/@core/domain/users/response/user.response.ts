@@ -7,4 +7,7 @@ export interface UserResponse {
   password?: string;
   role: UserRole;
   active: boolean;
+
+  createdAt?: Date;
+  updatedAt?: Date;
 }

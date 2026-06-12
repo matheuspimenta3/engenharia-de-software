@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UserSchema } from '../infra/database/typeorm/schemas/user.schema';
+import { UserSchema } from '../infra/repositories/users/user.schema';
 import { UserIoCModule } from '../app/user.module';
 
 @Module({

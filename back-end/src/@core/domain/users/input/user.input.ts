@@ -6,4 +6,7 @@ export interface UserInput {
     password: string;
     role: UserRole;
     active: boolean;
+
+    createdAt?: Date;
+    updatedAt?: Date;
 }

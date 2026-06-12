@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable prettier/prettier */
 import { Entity, Column, PrimaryColumn } from 'typeorm';
-import { UserRole } from '../../../../@core/domain/users/enums/enum.type.user';
+import { UserRole } from '../../../@core/domain/users/enums/enum.type.user';
 
 @Entity({ name: 'users' })
 export class UserSchema {
