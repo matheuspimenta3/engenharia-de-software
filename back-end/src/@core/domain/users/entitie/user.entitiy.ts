@@ -4,7 +4,7 @@ import UniqueId from "../../basic/uniqueId";
 import { UserInput } from "../input/user.input";
 import { UserResponse } from "../response/user.response";
 import { UserValidatorFactory } from "../validator/user.validator";
-
+import * as bcrypt from 'bcrypt';
 
 export default class User extends Entity<UserInput> {
 
@@ -27,7 +27,7 @@ export default class User extends Entity<UserInput> {
     return this.props.email;
   }
 
-  private set email(value: string) {
+  public set email(value: string) {
     this.props.email = value;
   }
 
@@ -66,6 +66,13 @@ export default class User extends Entity<UserInput> {
     this.active = !this.active;
   }
 
+  public async encryptPassword(): Promise<void> {
+    this.password = await bcrypt.hash(this.password, 10);
+  }
+
+  public async comparePassword(plainPassword: string,): Promise<boolean> {
+    return bcrypt.compare( plainPassword, this.password,);
+  }
   static newEntity(
     props: UserInput,
     id = UniqueId.unique().value,

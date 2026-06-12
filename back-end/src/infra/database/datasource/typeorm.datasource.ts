@@ -2,11 +2,6 @@ import 'dotenv/config';
 import { UserSchema } from '../../repositories/users/user.schema';
 import { DataSource } from 'typeorm';
 
-console.log({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_DATABASE,
-});
 
 export const AppDataSource = new DataSource({
   type: 'postgres',

@@ -30,7 +30,7 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
         const persistenceModel = this.toPersistence(entity);
         const createdSchema = this.repository.create(persistenceModel);
         const savedSchema = await this.repository.save(createdSchema);
-        
+
         return this.toDomain(savedSchema);
     }
 
@@ -39,7 +39,7 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
         const data = await this.repository.preload(persistenceModel);
 
         if (!data) throw new HttpException('Object not found', 404);
-        
+
         const updatedSchema = await this.repository.save(data);
         return this.toDomain(updatedSchema);
     }
@@ -51,7 +51,15 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
     async findPaginated(
         query: PaginationDto,
     ): Promise<PagedResponse<TDomain>> {
+
         const qb = this.repository.createQueryBuilder('entity');
+
+        if (query.orderBy) {
+            qb.orderBy(
+                `entity.${query.orderBy}`,
+                query.orderDirection ?? 'ASC',
+            );
+        }
 
         const total = await qb.getCount();
 
@@ -62,7 +70,9 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
 
         return {
             total,
-            data: schemas.map(schema => this.toDomain(schema)),
+            data: schemas.map(schema =>
+                this.toDomain(schema),
+            ),
         };
     }
 }

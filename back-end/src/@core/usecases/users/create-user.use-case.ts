@@ -21,7 +21,7 @@ export class CreateUserUseCase {
             role: input.role,
             active: input.active ?? true,
         });
-
+        await newUser.encryptPassword();
         const savedUser = await this.userRepository.create(newUser);
 
         return savedUser.toJSON();

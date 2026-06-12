@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, DeepPartial } from 'typeorm';
 import { GenericRepository } from '../abstractions/generic-repository';
-import User from '../../../@core/domain/users/entitie/user.entitiy'; // Mantendo o caminho/nome atual do seu projeto
+import User from '../../../@core/domain/users/entitie/user.entitiy';
 import { UserSchema } from './user.schema';
 import { IUserRepository } from '../../../@core/domain/users/interfaces/iuserrepository';
+import { Not } from 'typeorm';
 
 @Injectable()
 export class UserTypeOrmRepository
@@ -43,9 +43,12 @@ export class UserTypeOrmRepository
     }
 
 
-    async findByEmail(email: string): Promise<boolean> {
+    async findByEmail(email: string, id_user): Promise<boolean> {
         const user = await this.repository.findOne({
-            where: { email },
+            where: {
+                email: email,
+                id: Not(id_user), 
+            },
         });
 
         // Retorna true se encontrou o usuário, ou false caso contrário

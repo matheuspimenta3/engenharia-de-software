@@ -1,10 +1,3 @@
-
-
-export interface PagedResponse<T> {
-    total: number;
-    data: T[];
-}
-
 export interface IRepositoryGeneric<T> {
 
     GetAll(): Promise<T[]>;
