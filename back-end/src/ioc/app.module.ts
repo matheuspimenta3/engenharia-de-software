@@ -1,17 +1,13 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UserIoCModule } from '../ioc/user.module';
 import { UserSchema } from '../infra/database/typeorm/schemas/user.schema';
+import { UserIoCModule } from '../app/user.module';
 
 @Module({
   imports: [
-    // Ativa a leitura do arquivo .env em todo o projeto
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
+    ConfigModule.forRoot({ isGlobal: true }),
 
-    // Configuração do TypeORM usando as variáveis do ConfigService
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -23,9 +19,9 @@ import { UserSchema } from '../infra/database/typeorm/schemas/user.schema';
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_DATABASE'),
         entities: [UserSchema],
-        synchronize: false, // Mantendo sua regra: Usar apenas Migrations ou o comando de criação inicial do TypeORM
+        synchronize: false,
         ssl: {
-          rejectUnauthorized: false, // OBRIGATÓRIO PARA O RENDER: Bancos em nuvem exigem conexão SSL segura
+          rejectUnauthorized: false, // Necessário para conectar ao Render localmente
         },
       }),
     }),
@@ -33,4 +29,4 @@ import { UserSchema } from '../infra/database/typeorm/schemas/user.schema';
     UserIoCModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }

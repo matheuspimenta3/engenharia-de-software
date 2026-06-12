@@ -1,4 +1,3 @@
-import { PaginationDto } from '../../../app/dtos/pagination';
 
 
 export interface PagedResponse<T> {
@@ -36,4 +35,14 @@ export type OrderDTO = {
 export interface PagedResponse<T> {
   total: number;
   data: T[];
+}
+
+export class PaginationDto {
+  page: number = 1;
+  limit: number = 10;
+
+  orderBy?: string;
+  orderDirection?: 'ASC' | 'DESC';
+
+  filters?: FilterDTO[];
 }
