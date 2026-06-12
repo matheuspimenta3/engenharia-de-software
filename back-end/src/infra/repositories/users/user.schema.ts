@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable prettier/prettier */
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, UpdateDateColumn, CreateDateColumn } from 'typeorm';
 import { UserRole } from '../../../@core/domain/users/enums/enum.type.user';
 
 @Entity({ name: 'users' })
@@ -29,4 +29,14 @@ export class UserSchema {
 
     @Column({ type: 'boolean', default: true })
     active!: boolean;
+
+    @CreateDateColumn({
+        name: 'created_at',
+    })
+    createdAt!: Date;
+
+    @UpdateDateColumn({
+        name: 'updated_at',
+    })
+    updatedAt!: Date;
 }

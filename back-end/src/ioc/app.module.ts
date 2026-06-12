@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserSchema } from '../infra/repositories/users/user.schema';
-import { UserIoCModule } from '../app/user.module';
+import { UserIoCModule } from 'src/app/users/user.module';
 
 @Module({
   imports: [

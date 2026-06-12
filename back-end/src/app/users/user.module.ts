@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserSchema } from '../infra/repositories/users/user.schema';
-import { UserTypeOrmRepository } from '../infra/repositories/users/user.repository';
 import { UserController } from './user.controller';
-import { CreateUserUseCase } from '../@core/usecases/users/create-user.use-case';
+import { UserSchema } from 'src/infra/repositories/users/user.schema';
+import { UserTypeOrmRepository } from 'src/infra/repositories/users/user.repository';
+import { CreateUserUseCase } from 'src/@core/usecases/users/create-user.use-case';
 
 @Module({
     imports: [TypeOrmModule.forFeature([UserSchema]),],
