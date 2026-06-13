@@ -46,9 +46,6 @@ export class UserController {
         @Param('id') id: string,
         @Body() body: CreateUserDto,
     ) {
-        return this.updateUserUseCase.execute({
-            id,
-            ...body,
-        });
+        return this.updateUserUseCase.execute(body, id);
     }
 }
