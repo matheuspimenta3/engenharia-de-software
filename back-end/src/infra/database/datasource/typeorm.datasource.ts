@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { UserSchema } from '../../repositories/users/user.schema';
 import { DataSource } from 'typeorm';
-import { CategorySchema } from 'src/infra/repositories/category/category.schema';
+import { CategorySchema } from '../../repositories/category/category.schema';
 
 
 export const AppDataSource = new DataSource({

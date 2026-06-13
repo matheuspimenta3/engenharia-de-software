@@ -1,4 +1,4 @@
-import { ICategoryRepository } from "src/@core/domain/category/interfaces/iuserrepository";
+import { ICategoryRepository } from "src/@core/domain/category/interfaces/icategoryrepository";
 
 export class GetCategoryByIdUseCase {
 

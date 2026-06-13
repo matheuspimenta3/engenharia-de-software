@@ -4,7 +4,7 @@ import { DeepPartial, Not } from 'typeorm';
 import { GenericRepository } from '../abstractions/generic-repository';
 import { CategorySchema } from './category.schema';
 import Category from 'src/@core/domain/category/entitie/category.entitie';
-import { ICategoryRepository } from 'src/@core/domain/category/interfaces/iuserrepository';
+import { ICategoryRepository } from 'src/@core/domain/category/interfaces/icategoryrepository';
 
 @Injectable()
 export class CategoryTypeOrmRepository
