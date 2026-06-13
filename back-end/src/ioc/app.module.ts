@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserSchema } from '../infra/repositories/users/user.schema';
 import { UserIoCModule } from 'src/app/users/user.module';
+import { CategoryIoCModule } from 'src/app/category/category.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { UserIoCModule } from 'src/app/users/user.module';
     }),
 
     UserIoCModule,
+    CategoryIoCModule,
   ],
 })
 export class AppModule { }
