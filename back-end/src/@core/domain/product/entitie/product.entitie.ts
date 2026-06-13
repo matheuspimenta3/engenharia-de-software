@@ -5,7 +5,7 @@ import UniqueId from '../../basic/uniqueId';
 
 import { ProductInput } from '../input/product.input';
 import { ProductResponse } from '../response/product.response';
-import { ProductValidatorFactory } from '../validator/prduct.validator';
+import { ProductValidatorFactory } from '../validator/product.validator';
 
 
 export default class Product extends Entity<ProductInput> {
@@ -73,6 +73,22 @@ export default class Product extends Entity<ProductInput> {
         return this.props.updatedAt;
     }
 
+    public get quantity() {
+        return this.props.quantity;
+    }
+
+    public set quantity(value: number) {
+        this.props.quantity = value;
+    }
+
+    public get minimumQuantity() {
+        return this.props.minimumQuantity;
+    }
+
+    public set minimumQuantity(value: number) {
+        this.props.minimumQuantity = value;
+    }
+
     toggleStatus() {
         this.active = !this.active;
     }
@@ -118,7 +134,8 @@ export default class Product extends Entity<ProductInput> {
             costPrice: this.costPrice,
 
             categoryId: this.categoryId,
-
+            quantity: this.quantity,
+            minimumQuantity: this.minimumQuantity,
             active: this.active,
 
             createdAt: this.createdAt,
@@ -138,7 +155,8 @@ export default class Product extends Entity<ProductInput> {
             costPrice: this.costPrice,
 
             categoryId: this.categoryId,
-
+            quantity: this.quantity,
+            minimumQuantity: this.minimumQuantity,
             active: this.active,
 
             createdAt: this.createdAt,

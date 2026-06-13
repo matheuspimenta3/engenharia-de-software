@@ -39,6 +39,18 @@ export default class ProductValidator {
                 'Preço de custo não pode ser maior que o preço de venda',
             );
         }
+
+        if (data.quantity < 0) {
+            this.errors.push(
+                'Quantidade não pode ser negativa',
+            );
+        }
+
+        if (data.minimumQuantity < 0) {
+            this.errors.push(
+                'Quantidade mínima não pode ser negativa',
+            );
+        }
     }
 }
 

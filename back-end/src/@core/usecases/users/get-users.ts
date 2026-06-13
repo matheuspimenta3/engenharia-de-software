@@ -5,9 +5,15 @@ import { IUserRepository } from "../../domain/users/interfaces/iuserrepository";
 export class GetUsersUseCase {
     constructor(
         private readonly userRepository: IUserRepository,
-    ) {}
+    ) { }
 
     async execute(query: PaginationDto) {
-        return this.userRepository.findPaginated(query);
+        const result = await this.userRepository.findPaginated(query);
+
+        return {
+            total: result.total,
+            data: result.data.map(user => user.toJSON(),
+            ),
+        };
     }
 }

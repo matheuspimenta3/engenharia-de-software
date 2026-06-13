@@ -8,7 +8,7 @@ export class UpdateCategoryUseCase {
         private readonly categoryRepository: ICategoryRepository,
     ) { }
 
-    async execute( id: string, input: CategoryInput) {
+    async execute(id: string, input: CategoryInput) {
 
         const category = await this.categoryRepository.GetById(id);
 
@@ -16,11 +16,14 @@ export class UpdateCategoryUseCase {
             throw new Error('Categoria não encontrada');
         }
 
-        const alreadyExists = await this.categoryRepository.IsNameAlreadyUse( input.name, id, );
+        const alreadyExists = await this.categoryRepository.IsNameAlreadyUse(input.name, id,);
 
         if (alreadyExists) {
             throw new Error('Nome da categoria já está sendo utilizado',);
         }
+
+        category.name = input.name;
+        category.active = input.active;
 
         return await this.categoryRepository.update(
             Category.newEntity(

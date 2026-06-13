@@ -7,6 +7,9 @@ export interface ProductInput {
 
     categoryId: string;
 
+    quantity: number;
+    minimumQuantity: number;
+    
     active: boolean;
 
     createdAt?: Date;

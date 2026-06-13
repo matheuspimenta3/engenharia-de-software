@@ -1,16 +1,18 @@
 export interface ProductResponse {
-    id: string;
+  id: string;
 
-    name: string;
-    description?: string;
+  name: string;
+  description?: string;
 
-    price: number;
-    costPrice: number;
+  price: number;
+  costPrice: number;
 
-    categoryId: string;
+  categoryId: string;
 
-    active: boolean;
-
-    createdAt?: Date;
-    updatedAt?: Date;
+  active: boolean;
+  quantity: number;
+  minimumQuantity: number;
+  
+  createdAt?: Date;
+  updatedAt?: Date;
 }

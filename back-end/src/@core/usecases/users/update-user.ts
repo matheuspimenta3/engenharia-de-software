@@ -1,4 +1,3 @@
-import { UserInput } from "src/@core/domain/users/input/user.input";
 import { IUserRepository } from "src/@core/domain/users/interfaces/iuserrepository";
 import { CreateUserDto } from "src/app/users/dtos/create-user.dto";
 
@@ -11,17 +10,28 @@ export class UpdateUserUseCase {
         const user = await this.userRepository.GetById(id_user);
 
         if (!user) {
-            throw new Error('Usuário não encontrado');
-        }
-        const emailExists = await this.userRepository.findByEmail(input.email, id_user);
-        if (emailExists) {
-            throw new Error('Email ja cadastrado');
-
+            throw new Error( 'Usuário não econtrado',);
         }
 
+        const emailAlreadyExists = await this.userRepository.findByEmail( input.email,  id_user,);
 
-        return this.userRepository.update(
-            user,
-        );
+        if (emailAlreadyExists) {
+            throw new Error( 'Email já está sendo uado',);
+        }
+
+        user.name = input.name;
+        user.email = input.email;
+        user.role = input.role;
+        user.active ?? true;
+
+        if (input.password) {
+            user.password = input.password;
+            await user.encryptPassword();
+        }
+
+        const updatedUser =
+            await this.userRepository.update(user,);
+
+        return updatedUser.toJSON();
     }
 }
