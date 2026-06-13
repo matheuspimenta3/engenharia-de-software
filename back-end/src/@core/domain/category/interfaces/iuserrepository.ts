@@ -1,8 +1,8 @@
 import { IRepositoryGeneric } from '../../basic/irepository';
-import User from '../entitie/user.entitiy';
+import Category from '../entitie/category.entitie';
 
+export interface ICategoryRepository
+  extends IRepositoryGeneric<Category> {
 
-export interface IUserRepository extends IRepositoryGeneric<User> {
-
-    findByEmail(email: string, id?: string): Promise<Boolean>;
+    IsNameAlreadyUse( name: string, id?: string): Promise<boolean>;
 }

@@ -12,15 +12,12 @@ export class CreateUserUseCase {
         const emailExists = await this.userRepository.findByEmail(input.email);
 
         if (emailExists) {
-        }
+            throw new Error('Email ja cadastrado');
 
-        const newUser = User.newEntity({
-            name: input.name,
-            email: input.email,
-            password: input.password,
-            role: input.role,
-            active: input.active ?? true,
-        });
+        }
+        
+        input.active = true // ja é criado por padrão ativo.        
+        const newUser = User.newEntity(input);
         await newUser.encryptPassword();
         const savedUser = await this.userRepository.create(newUser);
 
