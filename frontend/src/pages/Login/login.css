@@ -1,0 +1,86 @@
+/* Centraliza o painel na tela inteira */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f172a;
+  font-family: sans-serif;
+  width: 100vw;
+}
+
+/* Caixa do formulário */
+.login-box {
+  background-color: #1e293b;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.login-box h2 {
+  color: #3b82f6;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.login-box p {
+  color: #94a3b8;
+  margin: 0 0 2rem 0; /* Corrigido de margin-0 para dois pontos */
+  font-size: 0.9rem;
+}
+
+/* Grupos de Input */
+.input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.input-group input {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+}
+
+/* Botão Verde Estilizado */
+.btn-login {
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 1rem;
+  display: block; /* Garante que ele respeite o tamanho interno */
+}
+
+.btn-login:hover {
+  background-color: #059669;
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
