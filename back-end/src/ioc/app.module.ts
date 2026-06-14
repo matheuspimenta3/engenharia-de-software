@@ -5,6 +5,8 @@ import { UserSchema } from '../infra/repositories/users/user.schema';
 import { UserIoCModule } from 'src/app/users/user.module';
 import { CategoryIoCModule } from 'src/app/category/category.module';
 import { ProductIoCModule } from 'src/app/product/product.module';
+import { ProductSchema } from 'src/infra/repositories/product/product.schema';
+import { CategorySchema } from 'src/infra/repositories/category/category.schema';
 
 @Module({
   imports: [
@@ -20,7 +22,7 @@ import { ProductIoCModule } from 'src/app/product/product.module';
         username: configService.get<string>('DB_USERNAME'),
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_DATABASE'),
-        entities: [UserSchema],
+        entities: [UserSchema, CategorySchema,ProductSchema,],
         synchronize: false,
         ssl: {
           rejectUnauthorized: false, // Necessário para conectar ao Render localmente
