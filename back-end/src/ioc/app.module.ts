@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserSchema } from '../infra/repositories/users/user.schema';
 import { UserIoCModule } from 'src/app/users/user.module';
 import { CategoryIoCModule } from 'src/app/category/category.module';
+import { ProductIoCModule } from 'src/app/product/product.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { CategoryIoCModule } from 'src/app/category/category.module';
 
     UserIoCModule,
     CategoryIoCModule,
+    ProductIoCModule,
   ],
 })
 export class AppModule { }
