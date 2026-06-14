@@ -7,6 +7,8 @@ import { CategoryIoCModule } from 'src/app/category/category.module';
 import { ProductIoCModule } from 'src/app/product/product.module';
 import { ProductSchema } from 'src/infra/repositories/product/product.schema';
 import { CategorySchema } from 'src/infra/repositories/category/category.schema';
+import { StockMovementIoCModule } from 'src/app/stock_movement/stock_movement.module';
+import { StockMovementSchema } from 'src/infra/repositories/stock_movement/stock_movement.schema';
 
 @Module({
   imports: [
@@ -22,7 +24,7 @@ import { CategorySchema } from 'src/infra/repositories/category/category.schema'
         username: configService.get<string>('DB_USERNAME'),
         password: configService.get<string>('DB_PASSWORD'),
         database: configService.get<string>('DB_DATABASE'),
-        entities: [UserSchema, CategorySchema,ProductSchema,],
+        entities: [UserSchema, CategorySchema,ProductSchema, StockMovementSchema,],
         synchronize: false,
         ssl: {
           rejectUnauthorized: false, // Necessário para conectar ao Render localmente
@@ -33,6 +35,7 @@ import { CategorySchema } from 'src/infra/repositories/category/category.schema'
     UserIoCModule,
     CategoryIoCModule,
     ProductIoCModule,
+    StockMovementIoCModule,
   ],
 })
 export class AppModule { }

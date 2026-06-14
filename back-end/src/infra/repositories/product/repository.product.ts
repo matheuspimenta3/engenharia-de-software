@@ -3,10 +3,10 @@ import { Injectable } from '@nestjs/common';
 import { DeepPartial, Not } from 'typeorm';
 
 import Product from 'src/@core/domain/product/entitie/product.entitie';
-import { IProductRepository } from 'src/@core/domain/product/interfaces/iproductrepository';
 
 import { GenericRepository } from '../abstractions/generic-repository';
 import { ProductSchema } from './product.schema';
+import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
 
 @Injectable()
 export class ProductTypeOrmRepository

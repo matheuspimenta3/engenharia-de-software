@@ -5,7 +5,7 @@ import { StockMovementInput } from 'src/@core/domain/stock-movement/input/stock.
 import { IStockMovementRepository } from 'src/@core/domain/stock-movement/interface/istockmovementpository';
 
 
-export class CreateEntryMovementUseCase {
+export class CreateExitMovementUseCase {
 
     constructor(
         private readonly stockMovementRepository: IStockMovementRepository,

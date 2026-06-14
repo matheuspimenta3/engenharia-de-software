@@ -47,12 +47,12 @@ export default class StockMovement extends Entity<StockMovementInput> {
         this.props.observation = value;
     }
 
-    public get createdBy() {
-        return this.props.createdBy;
+    public get user_id() {
+        return this.props.user_id;
     }
 
-    public set createdBy(value: string) {
-        this.props.createdBy = value;
+    public set user_id(value: string) {
+        this.props.user_id = value;
     }
 
     public get createdAt(): Date | undefined {
@@ -96,7 +96,7 @@ export default class StockMovement extends Entity<StockMovementInput> {
             quantity: this.quantity,
             type: this.type,
             observation: this.observation,
-            createdBy: this.createdBy,
+            user_id: this.user_id,
             createdAt: this.createdAt,
         };
     }
@@ -108,7 +108,7 @@ export default class StockMovement extends Entity<StockMovementInput> {
             quantity: this.quantity,
             type: this.type,
             observation: this.observation,
-            createdBy: this.createdBy,
+            user_id: this.user_id,
             createdAt: this.createdAt,
         };
     }

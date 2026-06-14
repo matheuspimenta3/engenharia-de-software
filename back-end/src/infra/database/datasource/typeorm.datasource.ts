@@ -3,6 +3,7 @@ import { UserSchema } from '../../repositories/users/user.schema';
 import { DataSource } from 'typeorm';
 import { CategorySchema } from '../../repositories/category/category.schema';
 import { ProductSchema } from 'src/infra/repositories/product/product.schema';
+import { StockMovementSchema } from 'src/infra/repositories/stock_movement/stock_movement.schema';
 
 
 export const AppDataSource = new DataSource({
@@ -19,7 +20,7 @@ export const AppDataSource = new DataSource({
     rejectUnauthorized: false,
   },
 
-  entities: [UserSchema, CategorySchema, ProductSchema,],
+  entities: [UserSchema, CategorySchema, ProductSchema, StockMovementSchema],
 
   migrations: [
     'src/infra/database/migrations/*.ts',

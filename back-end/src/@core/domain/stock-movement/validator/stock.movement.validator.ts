@@ -18,7 +18,7 @@ export default class StockMovementValidator {
             );
         }
 
-        if (!data.createdBy?.trim()) {
+        if (!data.user_id?.trim()) {
             this.errors.push(
                 'Usuário responsável é obrigatório',
             );

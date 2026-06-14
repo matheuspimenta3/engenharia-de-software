@@ -6,6 +6,6 @@ export type StockMovementResponse = {
     quantity: number;
     type: StockMovementType;
     observation?: string;
-    createdBy: string;
+    user_id: string;
     createdAt?: Date;
 };
