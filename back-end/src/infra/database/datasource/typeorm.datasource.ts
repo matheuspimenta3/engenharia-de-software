@@ -2,8 +2,8 @@ import 'dotenv/config';
 import { UserSchema } from '../../repositories/users/user.schema';
 import { DataSource } from 'typeorm';
 import { CategorySchema } from '../../repositories/category/category.schema';
-import { ProductSchema } from 'src/infra/repositories/product/product.schema';
-import { StockMovementSchema } from 'src/infra/repositories/stock_movement/stock_movement.schema';
+import { ProductSchema } from '../../repositories/product/product.schema';
+import { StockMovementSchema } from '../../repositories/stock_movement/stock_movement.schema';
 
 
 export const AppDataSource = new DataSource({

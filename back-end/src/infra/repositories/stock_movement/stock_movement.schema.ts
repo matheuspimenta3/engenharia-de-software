@@ -10,7 +10,7 @@ import {
 
 import { ProductSchema } from '../product/product.schema';
 import { UserSchema } from '../users/user.schema';
-import { StockMovementType } from 'src/@core/domain/stock-movement/enums/type.movement';
+import { StockMovementType } from '../../../@core/domain/stock-movement/enums/type.movement';
 
 
 @Entity({ name: 'stock_movements' })
