@@ -1,48 +1,70 @@
-# Engenharia de Software
-Trabalho Final de Engenharia de Software
+# Sistema de Controle de Estoque
 
----
+Trabalho final da disciplina de Engenharia de Software, desenvolvido como aplicação prática dos conteúdos estudados ao longo do semestre.
 
-## 01. Identificação do Projeto:
-- **Nome do projeto:** Engenharia de Software
-- **Problema escolhido:** Controle de Estoque
+## 1. Identificação do projeto
+
+- **Nome do projeto:** Sistema de Controle de Estoque
+- **Disciplina:** Engenharia de Software
+- **Curso:** Sistemas de Informação
 - **Turma/Semestre:** 2026/01 - 14A
 - **Docente:** Johnatan Alves de Oliveira
+- **Problema escolhido:** Controle de estoque
 
-### Integrantes do Grupo:
-- Alexandre Bortone - Product Owner / Time de Desenvolvimento;
-- Matheus Freire Costa Pimenta - Scrum Master / Time de Desenvolvimento;
-- Lucas Marcelino Neves - Time de Desenvolvimento;
-- Mark Leite Sa - Time de Desenvolvimento;
+## 2. Integrantes do grupo
 
+| Integrante | Papel no projeto |
+|---|---|
+| Alexandre Bortone | Product Owner / Back-end |
+| Matheus Freire Costa Pimenta | Scrum Master / Documentação, organização, testes e registros de entrega |
+| Lucas Marcelino Neves | Dev Team / Frontend |
+| Mark Leite Sa | Dev Team / Apoio ao código, integração e revisão |
 
----
+## 3. Objetivo do trabalho
 
-## 02. Objetivo do Trabalho:
-Desenvolver uma solução de Software para Controle de Estoque, aplicando os conteúdos da disciplina ao longo do semestre.
+Desenvolver uma solução de software para controle de estoque, aplicando os principais conceitos da disciplina de Engenharia de Software, incluindo Scrum, requisitos, modelagem, arquitetura, padrões de projeto, implementação, testes e documentação incremental.
 
-### Entregas Incrementais:
-- Processos de Software;
-- Requisitos;
-- Modelagem;
-- Princípios de Projeto;
-- Padrões de Projeto;
-- Arquitetura de Software;
-- Testes do Projeto;
+## 4. Descrição da solução
 
----
+O Sistema de Controle de Estoque foi desenvolvido para apoiar pequenos comércios e empreendimentos na organização de seus produtos e movimentações de estoque.
 
-## 03. Organização do Repositório:
+A solução permite registrar produtos, acompanhar entradas e saídas de estoque, consultar informações cadastradas, organizar produtos por categoria e apoiar o controle das movimentações realizadas.
+
+O projeto foi desenvolvido de forma incremental, com documentação das etapas realizadas ao longo das sprints.
+
+## 5. Funcionalidades principais
+
+- Cadastro, edição, consulta e remoção de produtos
+- Cadastro e consulta de categorias
+- Registro de entrada de estoque
+- Registro de saída de estoque
+- Consulta de movimentações de estoque
+- Cadastro e gerenciamento básico de usuários
+- Organização das funcionalidades em frontend e back-end
+- Registro de testes e validações por meio de Issues
+
+## 6. Tecnologias utilizadas
+
+| Área | Tecnologia |
+|---|---|
+| Frontend | React, TypeScript, Vite e Axios |
+| Back-end | NestJS, TypeScript, TypeORM e PostgreSQL |
+| Documentação | Markdown |
+| Controle de versão | Git e GitHub |
+| Organização do trabalho | Scrum adaptado ao contexto acadêmico |
+| Rastreamento | GitHub Issues |
+
+## 7. Organização do repositório
+
 ```text
 .
-├── README.md
-├── .gitignore
 ├── .github
 │   └── ISSUE_TEMPLATE
-│       ├── user-story.md
-│       ├── sprint-task.md
-│       └── bug-report.md
+│       ├── bug-report.md
+│       └── test---validation.md
+├── back-end
 ├── docs
+│   ├── imagens
 │   ├── 01_problema_e_visao_do_produto.md
 │   ├── 02_scrum_e_organizacao_do_grupo.md
 │   ├── 03_product_backlog.md
@@ -53,54 +75,119 @@ Desenvolver uma solução de Software para Controle de Estoque, aplicando os con
 │   ├── 08_testes.md
 │   ├── 09_entregas_incrementais.md
 │   └── 10_apresentacao_final.md
+├── frontend
 ├── sprints
-│   ├── sprint_01.md
-│   ├── sprint_02.md
-│   └── sprint_review_retro_template.md
-└── entregas
-    └── entrega_template.md
+│   ├── sprint-01.md
+│   ├── sprint-02.md
+│   ├── sprint-03.md
+│   ├── sprint-04.md
+│   ├── sprint-05.md
+│   ├── sprint-06.md
+│   ├── sprint-07.md
+│   └── sprint-08.md
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
 ```
 
----
+## 8. Como executar o projeto
 
-## 04. Fluxo do Trabalho:
-- Visão do Produto
-- Product Backlog
-- Sprint Backlog
-- Registro de Planejamento das Sprints
-- Registro de Revisão/Retrospectiva
-- Documentação Técnica Incremental
+### Pré-requisitos
 
----
+- Node.js instalado
+- npm instalado
+- Git instalado
+- PostgreSQL disponível para o back-end
 
-## 05. Entregas:
-| Entrega | Foco Principal | Arquivo |
-|---|---|---|
-| Entrega 1 | Problema, Visão e Organização | `docs/01_problema_e_visao_do_produto.md` e `docs/02_scrum_e_organizacao_do_grupo.md` |
-| Entrega 2 | Backlog e Requisitos | `docs/03_product_backlog.md` e `docs/04_requisitos.md` |
-| Entrega 3 | Modelagem e Decisões | `docs/05_modelagem.md` |
-| Entrega 4 | Arquitetura e Padrões | `docs/06_arquitetura_e_projeto.md` e `docs/07_padroes_de_projeto.md` |
-| Entrega 5 | Estratégia de Testes e Evidências | `docs/08_testes.md` |
-| Entrega F | Consolidação e Apresentação | `docs/09_entregas_incrementais.md` e `docs/10_apresentacao_final.md` |
+### Executar o back-end
 
----
+```bash
+cd back-end
+npm install
+npm run start:dev
+```
 
-## 06. Informações Complementares:
+### Executar o frontend
 
-### Boas Praticas:
-- Commits frequentes e significativos;
-- Clareza nos nomes de arquivos e versões;
-- Documentação incremental;
-- Backlog priorizado;
-- Rastreabilidade entre problema, requisitos, modelagem, arquitetura e testes;
-- Evidências de revisão e evolução do produto.
+Em outro terminal:
 
-### Critérios de Qualidade
-- Organização;
-- Completude;
-- Uso coerente de Scrum;
-- Aplicação dos conceitos da disciplina;
-- Evolução incremental real;
-- Autoria do grupo.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-### Licença de Uso:
+Após iniciar o frontend, o terminal informará o endereço local para acessar a aplicação no navegador.
+
+## 9. Documentação do projeto
+
+| Documento | Descrição |
+|---|---|
+| `docs/01_problema_e_visao_do_produto.md` | Definição do problema e visão do produto |
+| `docs/02_scrum_e_organizacao_do_grupo.md` | Organização do grupo e aplicação do Scrum |
+| `docs/03_product_backlog.md` | Product Backlog do sistema |
+| `docs/04_requisitos.md` | Requisitos funcionais e não funcionais |
+| `docs/05_modelagem.md` | Modelagem do sistema e diagramas |
+| `docs/06_arquitetura_e_projeto.md` | Arquitetura e decisões de projeto |
+| `docs/07_padroes_de_projeto.md` | Padrões de projeto utilizados |
+| `docs/08_testes.md` | Estratégia, casos e evidências de testes |
+| `docs/09_entregas_incrementais.md` | Consolidação das entregas por sprint |
+| `docs/10_apresentacao_final.md` | Planejamento da apresentação final |
+
+## 10. Entregas incrementais
+
+| Sprint | Período | Foco principal | Status |
+|---|---|---|---|
+| Sprint 01 | 04/04/2026 a 10/04/2026 | Problema, visão do produto e organização inicial | Concluída |
+| Sprint 02 | 11/04/2026 a 17/04/2026 | Product Backlog e requisitos | Concluída |
+| Sprint 03 | 18/04/2026 a 24/04/2026 | Modelagem do sistema | Concluída |
+| Sprint 04 | 25/04/2026 a 01/05/2026 | Arquitetura e decisões de projeto | Concluída |
+| Sprint 05 | 02/05/2026 a 08/05/2026 | Padrões de projeto | Concluída |
+| Sprint 06 | 09/05/2026 a 22/05/2026 | Estrutura inicial do back-end e frontend | Concluída |
+| Sprint 07 | 23/05/2026 a 05/06/2026 | Evolução das funcionalidades e testes manuais | Concluída |
+| Sprint 08 | 06/06/2026 a 13/06/2026 | Finalização do projeto, documentação, testes e apresentação | Concluída |
+
+## 11. Testes e evidências
+
+Os testes foram registrados no documento `docs/08_testes.md`, contemplando testes funcionais, testes de interface, testes de integração e testes exploratórios.
+
+Também foram utilizadas Issues do GitHub para registrar validações, defeitos encontrados e correções realizadas durante o desenvolvimento.
+
+Foram utilizados os seguintes templates de Issues:
+
+- `Bug report`: registro de defeitos, correções e ajustes
+- `Test / Validation`: registro de testes manuais e validações de requisitos
+
+## 12. Fluxo de trabalho adotado
+
+O grupo utilizou uma adaptação do Scrum ao contexto acadêmico da disciplina. O trabalho foi organizado em sprints, com planejamento, execução, revisão do incremento e registro das pendências para a etapa seguinte.
+
+O fluxo geral seguido foi:
+
+1. definição do problema e visão do produto
+2. organização do grupo
+3. levantamento e priorização de requisitos
+4. modelagem da solução
+5. definição da arquitetura
+6. escolha de padrões de projeto
+7. implementação incremental
+8. testes e validações
+9. consolidação da documentação
+10. preparação da apresentação final
+
+## 13. Critérios de qualidade considerados
+
+- Organização do repositório
+- Clareza na documentação
+- Rastreabilidade entre problema, requisitos, modelagem, implementação e testes
+- Uso coerente do Scrum
+- Evolução incremental do projeto
+- Registro das sprints
+- Registro de testes e evidências
+- Coerência entre documentação e entrega final
+
+## 14. Licença
+
+Este projeto está licenciado sob a licença MIT.
