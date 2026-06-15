@@ -15,10 +15,10 @@ Trabalho final da disciplina de Engenharia de Software, desenvolvido como aplica
 
 | Integrante | Papel no projeto |
 |---|---|
-| Alexandre Bortone | Product Owner / Back-end |
-| Matheus Freire Costa Pimenta | Scrum Master / Documentação, organização, testes e registros de entrega |
+| Alexandre Bortone | Product Owner / Backend |
+| Matheus Freire Costa Pimenta | Scrum Master / Documentação |
 | Lucas Marcelino Neves | Dev Team / Frontend |
-| Mark Leite Sa | Dev Team / Apoio ao código, integração e revisão |
+| Mark Leite Sa | Dev Team / Integração |
 
 ## 3. Objetivo do trabalho
 
