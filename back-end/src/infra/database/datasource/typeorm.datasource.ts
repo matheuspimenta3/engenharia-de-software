@@ -2,6 +2,8 @@ import 'dotenv/config';
 import { UserSchema } from '../../repositories/users/user.schema';
 import { DataSource } from 'typeorm';
 import { CategorySchema } from '../../repositories/category/category.schema';
+import { ProductSchema } from '../../repositories/product/product.schema';
+import { StockMovementSchema } from '../../repositories/stock_movement/stock_movement.schema';
 
 
 export const AppDataSource = new DataSource({
@@ -18,7 +20,7 @@ export const AppDataSource = new DataSource({
     rejectUnauthorized: false,
   },
 
-  entities: [UserSchema, CategorySchema],
+  entities: [UserSchema, CategorySchema, ProductSchema, StockMovementSchema],
 
   migrations: [
     'src/infra/database/migrations/*.ts',
