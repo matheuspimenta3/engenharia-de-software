@@ -11,7 +11,7 @@ export default function Users({ onMudarTela }: { onMudarTela: (tela: string) => 
     try {
       setLoading(true);
       const response = await api.get('/users'); 
-      setUsers(response.data);
+      setUsers(response.data.data || []);
       setError('');
     } catch (err: any) {
       console.error(err);

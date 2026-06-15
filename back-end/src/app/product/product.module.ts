@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { ProductSchema } from 'src/infra/repositories/product/product.schema';
+import { ProductSchema } from '../../infra/repositories/product/product.schema';
 
 import { ProductController } from './product.controller';
-import { ProductTypeOrmRepository } from 'src/infra/repositories/product/repository.product';
-import { CreateProductUseCase } from 'src/@core/usecases/product/create-product';
-import { UpdateProductUseCase } from 'src/@core/usecases/product/update-product';
-import { DeleteProductUseCase } from 'src/@core/usecases/product/delete-product';
-import { GetProductsUseCase } from 'src/@core/usecases/product/get-products';
-import { GetProductByIdUseCase } from 'src/@core/usecases/product/get-ById-product';
+import { ProductTypeOrmRepository } from '../../infra/repositories/product/repository.product';
+import { CreateProductUseCase } from '../../@core/usecases/product/create-product';
+import { UpdateProductUseCase } from '../../@core/usecases/product/update-product';
+import { DeleteProductUseCase } from '../../@core/usecases/product/delete-product';
+import { GetProductsUseCase } from '../../@core/usecases/product/get-products';
+import { GetProductByIdUseCase } from '../../@core/usecases/product/get-ById-product';
 
 
 @Module({

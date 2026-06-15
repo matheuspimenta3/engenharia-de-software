@@ -1,4 +1,4 @@
-import { ICategoryRepository } from 'src/@core/domain/category/interfaces/icategoryrepository';
+import { ICategoryRepository } from '../../domain/category/interfaces/icategoryrepository';
 import { PaginationDto } from '../../domain/basic/irepository';
 
 export class GetCategoriesUseCase {

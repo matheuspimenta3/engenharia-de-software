@@ -54,7 +54,7 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
 
         const qb = this.repository.createQueryBuilder('entity');
 
-        if (query.orderBy) {
+        if (query?.orderBy) {
             qb.orderBy(
                 `entity.${query.orderBy}`,
                 query.orderDirection ?? 'ASC',
@@ -63,9 +63,14 @@ export abstract class GenericRepository<TDomain extends Entity<any>, TSchema ext
 
         const total = await qb.getCount();
 
+        const page = query?.page ? Math.max(1, parseInt(query.page as any, 10)) : 1;
+        const limit = query?.limit ? Math.max(1, parseInt(query.limit as any, 10)) : 10;
+
+        const skip = (page - 1) * limit;
+
         const schemas = await qb
-            .skip((query.page - 1) * query.limit)
-            .take(query.limit)
+            .skip(skip)
+            .take(limit)
             .getMany();
 
         return {

@@ -1,4 +1,4 @@
-import { IStockMovementRepository } from "src/@core/domain/stock-movement/interface/istockmovementpository";
+import { IStockMovementRepository } from "../../domain/stock-movement/interface/istockmovementpository";
 
 export class GetStockMovementByIdUseCase {
 

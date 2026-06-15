@@ -1,4 +1,4 @@
-import { IProductRepository } from "src/@core/domain/product/interface/iproductrepository";
+import { IProductRepository } from "../../domain/product/interface/iproductrepository";
 
 export class GetProductByIdUseCase {
 

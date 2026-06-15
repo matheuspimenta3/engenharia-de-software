@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
+import { InjectRepository as TypeOrmInjectRepository } from '@nestjs/typeorm';
 import { Repository, DeepPartial } from 'typeorm';
 import { GenericRepository } from '../abstractions/generic-repository';
 import User from '../../../@core/domain/users/entitie/user.entitiy';
@@ -11,6 +12,14 @@ import { Not } from 'typeorm';
 export class UserTypeOrmRepository
     extends GenericRepository<User, UserSchema>
     implements IUserRepository {
+    
+    // 2. ADICIONE O DECORADOR BEM AQUI ANTES DO PARÂMETRO:
+    constructor(
+        @TypeOrmInjectRepository(UserSchema)
+        repository: Repository<UserSchema>
+    ) {
+        super(repository);
+    }
 
 
     protected toDomain(schema: UserSchema): User {
@@ -43,15 +52,22 @@ export class UserTypeOrmRepository
     }
 
 
-    async findByEmail(email: string, id_user): Promise<boolean> {
+    async findByEmail(email: string, id_user?: string): Promise<boolean> {
+        const whereCondition: any = { email: email };
+
+        // Se o id_user foi passado (cenário de Update), ignora o próprio ID na busca
+        if (id_user) {
+            whereCondition.id = Not(id_user);
+        }
+
         const user = await this.repository.findOne({
-            where: {
-                email: email,
-                id: Not(id_user), 
-            },
+            where: whereCondition,
         });
 
         // Retorna true se encontrou o usuário, ou false caso contrário
         return !!user;
     }
 }
+
+// Re-export the TypeORM InjectRepository decorator under the local name if needed elsewhere
+export const InjectRepository = TypeOrmInjectRepository;

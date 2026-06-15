@@ -1,5 +1,5 @@
-import { PaginationDto } from 'src/@core/domain/basic/irepository';
-import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
+import { PaginationDto } from '../../domain/basic/irepository';
+import { IProductRepository } from '../../domain/product/interface/iproductrepository';
 
 export class GetProductsUseCase {
 

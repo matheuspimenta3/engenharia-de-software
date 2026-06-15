@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, Query, Inject, BadRequestException, ConflictException,} from '@nestjs/common';
-import { CreateProductUseCase } from 'src/@core/usecases/product/create-product';
-import { DeleteProductUseCase } from 'src/@core/usecases/product/delete-product';
-import { GetProductByIdUseCase } from 'src/@core/usecases/product/get-ById-product';
-import { GetProductsUseCase } from 'src/@core/usecases/product/get-products';
-import { UpdateProductUseCase } from 'src/@core/usecases/product/update-product';
+import { CreateProductUseCase } from '../../@core/usecases/product/create-product';
+import { DeleteProductUseCase } from '../../@core/usecases/product/delete-product';
+import { GetProductByIdUseCase } from '../../@core/usecases/product/get-ById-product';
+import { GetProductsUseCase } from '../../@core/usecases/product/get-products';
+import { UpdateProductUseCase } from '../../@core/usecases/product/update-product';
 import { CreateProductDto } from './dtos/product.dto';
 
 

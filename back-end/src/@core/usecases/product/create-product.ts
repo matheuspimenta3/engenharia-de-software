@@ -1,6 +1,6 @@
-import Product from 'src/@core/domain/product/entitie/product.entitie';
-import { ProductInput } from 'src/@core/domain/product/input/product.input';
-import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
+import Product from '../../domain/product/entitie/product.entitie';
+import { ProductInput } from '../../domain/product/input/product.input';
+import { IProductRepository } from '../../domain/product/interface/iproductrepository';
 
 export class CreateProductUseCase {
 

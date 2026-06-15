@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserSchema } from '../infra/repositories/users/user.schema';
-import { UserIoCModule } from 'src/app/users/user.module';
-import { CategoryIoCModule } from 'src/app/category/category.module';
-import { ProductIoCModule } from 'src/app/product/product.module';
-import { ProductSchema } from 'src/infra/repositories/product/product.schema';
-import { CategorySchema } from 'src/infra/repositories/category/category.schema';
-import { StockMovementIoCModule } from 'src/app/stock_movement/stock_movement.module';
-import { StockMovementSchema } from 'src/infra/repositories/stock_movement/stock_movement.schema';
+import { UserIoCModule } from '../app/users/user.module';
+import { CategoryIoCModule } from '../app/category/category.module';
+import { ProductIoCModule } from '../app/product/product.module';
+import { ProductSchema } from '../infra/repositories/product/product.schema';
+import { CategorySchema } from '../infra/repositories/category/category.schema';
+import { StockMovementIoCModule } from '../app/stock_movement/stock_movement.module';
+import { StockMovementSchema } from '../infra/repositories/stock_movement/stock_movement.schema';
 
 @Module({
   imports: [

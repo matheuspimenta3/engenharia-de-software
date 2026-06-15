@@ -1,17 +1,23 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { DeepPartial, Not } from 'typeorm';
-
-import Product from 'src/@core/domain/product/entitie/product.entitie';
+import { Repository, DeepPartial, Not } from 'typeorm';
+import { InjectRepository as TypeOrmInjectRepository } from '@nestjs/typeorm';
+import Product from '../../../@core/domain/product/entitie/product.entitie';
 
 import { GenericRepository } from '../abstractions/generic-repository';
 import { ProductSchema } from './product.schema';
-import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
+import { IProductRepository } from '../../../@core/domain/product/interface/iproductrepository';
 
 @Injectable()
 export class ProductTypeOrmRepository
     extends GenericRepository<Product, ProductSchema>
     implements IProductRepository {
+    constructor(
+        @TypeOrmInjectRepository(ProductSchema)
+        repository: Repository<ProductSchema>
+    ) {
+        super(repository);
+    }
 
     protected toDomain(
         schema: ProductSchema,

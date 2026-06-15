@@ -1,15 +1,22 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { DeepPartial, Not } from 'typeorm';
+import { Repository, DeepPartial, Not } from 'typeorm';
 import { GenericRepository } from '../abstractions/generic-repository';
 import { CategorySchema } from './category.schema';
-import Category from 'src/@core/domain/category/entitie/category.entitie';
-import { ICategoryRepository } from 'src/@core/domain/category/interfaces/icategoryrepository';
+import Category from '../../../@core/domain/category/entitie/category.entitie';
+import { InjectRepository as TypeOrmInjectRepository } from '@nestjs/typeorm';
+import { ICategoryRepository } from '../../../@core/domain/category/interfaces/icategoryrepository';
 
 @Injectable()
 export class CategoryTypeOrmRepository
     extends GenericRepository<Category, CategorySchema>
     implements ICategoryRepository {
+    constructor(
+        @TypeOrmInjectRepository(CategorySchema)
+        repository: Repository<CategorySchema>
+    ) {
+        super(repository);
+    }
 
     protected toDomain(schema: CategorySchema): Category {
 

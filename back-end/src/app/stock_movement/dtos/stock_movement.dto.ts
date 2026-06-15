@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty, IsOptional, IsString, Min } from 'class-validator';
-import { StockMovementType } from 'src/@core/domain/stock-movement/enums/type.movement';
+import { StockMovementType } from '../../../@core/domain/stock-movement/enums/type.movement';
 
 export class StockMovementDto {
 

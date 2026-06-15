@@ -9,11 +9,11 @@ import {
     BadRequestException,
 } from '@nestjs/common';
 
-import { PaginationDto } from 'src/@core/domain/basic/irepository';
-import { CreateEntryMovementUseCase } from 'src/@core/usecases/stock_movement/create-entry-stock-movement';
-import { CreateExitMovementUseCase } from 'src/@core/usecases/stock_movement/create-exit-stock-movement';
-import { GetStockMovementByIdUseCase } from 'src/@core/usecases/stock_movement/get-ById-stock-movement';
-import { GetStockMovementsUseCase } from 'src/@core/usecases/stock_movement/get-stock-movements';
+import { PaginationDto } from '../../@core/domain/basic/irepository';
+import { CreateEntryMovementUseCase } from '../../@core/usecases/stock_movement/create-entry-stock-movement';
+import { CreateExitMovementUseCase } from '../../@core/usecases/stock_movement/create-exit-stock-movement';
+import { GetStockMovementByIdUseCase } from '../../@core/usecases/stock_movement/get-ById-stock-movement';
+import { GetStockMovementsUseCase } from '../../@core/usecases/stock_movement/get-stock-movements';
 import { StockMovementDto } from './dtos/stock_movement.dto';
 
 

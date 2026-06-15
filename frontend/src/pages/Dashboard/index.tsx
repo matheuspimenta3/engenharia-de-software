@@ -26,10 +26,11 @@ export default function Dashboard({ onMudarTela }: DashboardProps) {
         api.get('/users')
       ]);
 
-      // Atualiza os estados com a quantidade real de itens (tamanho do array)
-      setTotalProdutos(resProdutos.data.length || 0);
-      setTotalCategorias(resCategorias.data.length || 0);
-      setTotalUsuarios(resUsuarios.data.length || 0);
+      // 🔹 ATUALIZAÇÃO CRÍTICA: Lendo a propriedade .total enviada pelo backend paginado
+      // Caso o endpoint não use a paginação (ex: usuários antigos), o fallback busca o .length do array interno ou do escopo principal.
+      setTotalProdutos(resProdutos.data.total !== undefined ? resProdutos.data.total : (resProdutos.data.data?.length || resProdutos.data.length || 0));
+      setTotalCategorias(resCategorias.data.total !== undefined ? resCategorias.data.total : (resCategorias.data.data?.length || resCategorias.data.length || 0));
+      setTotalUsuarios(resUsuarios.data.total !== undefined ? resUsuarios.data.total : (resUsuarios.data.data?.length || resUsuarios.data.length || 0));
 
     } catch (err: any) {
       console.error(err);
@@ -51,7 +52,8 @@ export default function Dashboard({ onMudarTela }: DashboardProps) {
         <ul>
           <li className="active" onClick={() => onMudarTela('dashboard')}>📊 Dashboard</li>
           <li onClick={() => onMudarTela('produtos')}>📦 Produtos</li>
-          <li onClick={() => onMudarTela('categories')}>🗂️ Categorias</li>
+          {/* 🔹 CORREÇÃO DE ROTA: Alterado de 'categories' para 'categorias' para alinhar com o app */}
+          <li onClick={() => onMudarTela('categorias')}>🗂️ Categorias</li>
           <li onClick={() => onMudarTela('usuarios')}>👥 Usuários</li>
           <li style={{ marginTop: '2rem', color: '#f87171', cursor: 'pointer' }} onClick={() => onMudarTela('login')}>Sair</li>
         </ul>

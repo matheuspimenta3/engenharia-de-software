@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CategorySchema } from 'src/infra/repositories/category/category.schema';
+import { CategorySchema } from '../../infra/repositories/category/category.schema';
 import { CategoryController } from './category.contoller';
-import { CategoryTypeOrmRepository } from 'src/infra/repositories/category/category.repository';
-import { CreateCategoryUseCase } from 'src/@core/usecases/category/create-category';
-import { GetCategoriesUseCase } from 'src/@core/usecases/category/get catergories';
-import { UpdateCategoryUseCase } from 'src/@core/usecases/category/update-category';
-import { DeactivateCategoryUseCase } from 'src/@core/usecases/category/desactivate-category';
-import { GetCategoryByIdUseCase } from 'src/@core/usecases/category/get-ById-categories';
+import { CategoryTypeOrmRepository } from '../../infra/repositories/category/category.repository';
+import { CreateCategoryUseCase } from '../../@core/usecases/category/create-category';
+import { GetCategoriesUseCase } from '../../@core/usecases/category/get catergories';
+import { UpdateCategoryUseCase } from '../../@core/usecases/category/update-category';
+import { DeactivateCategoryUseCase } from '../../@core/usecases/category/desactivate-category';
+import { GetCategoryByIdUseCase } from '../../@core/usecases/category/get-ById-categories';
 
 
 

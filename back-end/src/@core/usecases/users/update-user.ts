@@ -1,5 +1,5 @@
-import { IUserRepository } from "src/@core/domain/users/interfaces/iuserrepository";
-import { CreateUserDto } from "src/app/users/dtos/create-user.dto";
+import { IUserRepository } from "../../domain/users/interfaces/iuserrepository";
+import { CreateUserDto } from "../../../app/users/dtos/create-user.dto";
 
 export class UpdateUserUseCase {
     constructor(

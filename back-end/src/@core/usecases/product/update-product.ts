@@ -1,5 +1,5 @@
-import { ProductInput } from 'src/@core/domain/product/input/product.input';
-import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
+import { ProductInput } from '../../domain/product/input/product.input';
+import { IProductRepository } from '../../domain/product/interface/iproductrepository';
 
 export class UpdateProductUseCase {
 

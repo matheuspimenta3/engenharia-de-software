@@ -1,6 +1,6 @@
-import Category from "src/@core/domain/category/entitie/category.entitie";
-import { CategoryInput } from "src/@core/domain/category/input/category.input";
-import { ICategoryRepository } from "src/@core/domain/category/interfaces/icategoryrepository";
+import Category from "../../domain/category/entitie/category.entitie";
+import { CategoryInput } from "../../domain/category/input/category.input";
+import { ICategoryRepository } from "../../domain/category/interfaces/icategoryrepository";
 
 export class UpdateCategoryUseCase {
 

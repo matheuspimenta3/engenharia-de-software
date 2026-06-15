@@ -1,19 +1,26 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { DeepPartial } from 'typeorm';
+import { Repository, DeepPartial, Not } from 'typeorm';
+import { InjectRepository as TypeOrmInjectRepository } from '@nestjs/typeorm';
 import { GenericRepository } from '../abstractions/generic-repository';
-import StockMovement from 'src/@core/domain/stock-movement/entitie/stock.movement.entitie';
+import StockMovement from '../../../@core/domain/stock-movement/entitie/stock.movement.entitie';
 import { StockMovementSchema } from './stock_movement.schema';
-import { IStockMovementRepository } from 'src/@core/domain/stock-movement/interface/istockmovementpository';
+import { IStockMovementRepository } from '../../../@core/domain/stock-movement/interface/istockmovementpository';
 
 
 @Injectable()
 export class StockMovementTypeOrmRepository
- extends GenericRepository<
+    extends GenericRepository<
         StockMovement,
         StockMovementSchema
     >
     implements IStockMovementRepository {
+    constructor(
+            @TypeOrmInjectRepository(StockMovementSchema)
+            repository: Repository<StockMovementSchema>
+        ) {
+            super(repository);
+        }    
 
     protected toDomain(
         schema: StockMovementSchema,

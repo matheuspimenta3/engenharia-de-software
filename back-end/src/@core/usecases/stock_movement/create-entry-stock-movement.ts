@@ -1,8 +1,8 @@
-import Product from 'src/@core/domain/product/entitie/product.entitie';
-import { IProductRepository } from 'src/@core/domain/product/interface/iproductrepository';
-import StockMovement from 'src/@core/domain/stock-movement/entitie/stock.movement.entitie';
-import { StockMovementInput } from 'src/@core/domain/stock-movement/input/stock.movement.input';
-import { IStockMovementRepository } from 'src/@core/domain/stock-movement/interface/istockmovementpository';
+import Product from '../../domain/product/entitie/product.entitie';
+import { IProductRepository } from '../../domain/product/interface/iproductrepository';
+import StockMovement from '../../domain/stock-movement/entitie/stock.movement.entitie';
+import { StockMovementInput } from '../../domain/stock-movement/input/stock.movement.input';
+import { IStockMovementRepository } from '../../domain/stock-movement/interface/istockmovementpository';
 
 
 export class CreateEntryMovementUseCase {

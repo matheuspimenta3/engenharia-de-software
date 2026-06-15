@@ -11,12 +11,12 @@ import {
 } from '@nestjs/common';
 
 import { CategoryDto } from './dtos/category.dto';
-import { PaginationDto } from 'src/@core/domain/basic/irepository';
-import { CreateCategoryUseCase } from 'src/@core/usecases/category/create-category';
-import { GetCategoriesUseCase } from 'src/@core/usecases/category/get catergories';
-import { UpdateCategoryUseCase } from 'src/@core/usecases/category/update-category';
-import { DeactivateCategoryUseCase } from 'src/@core/usecases/category/desactivate-category';
-import { GetCategoryByIdUseCase } from 'src/@core/usecases/category/get-ById-categories';
+import { PaginationDto } from '../../@core/domain/basic/irepository';
+import { CreateCategoryUseCase } from '../../@core/usecases/category/create-category';
+import { GetCategoriesUseCase } from '../../@core/usecases/category/get catergories';
+import { UpdateCategoryUseCase } from '../../@core/usecases/category/update-category';
+import { DeactivateCategoryUseCase } from '../../@core/usecases/category/desactivate-category';
+import { GetCategoryByIdUseCase } from '../../@core/usecases/category/get-ById-categories';
 
 @Controller('categories')
 export class CategoryController {

@@ -1,9 +1,9 @@
 import { Controller, Post, Body, Inject, ConflictException, BadRequestException, Get, Query, Put, Param } from '@nestjs/common';
-import { CreateUserUseCase } from 'src/@core/usecases/users/create-user.use-case';
+import { CreateUserUseCase } from '../../@core/usecases/users/create-user.use-case';
 import { CreateUserDto } from './dtos/create-user.dto';
-import { GetUsersUseCase } from 'src/@core/usecases/users/get-users';
-import { PaginationDto } from 'src/@core/domain/basic/irepository';
-import { UpdateUserUseCase } from 'src/@core/usecases/users/update-user';
+import { GetUsersUseCase } from '../../@core/usecases/users/get-users';
+import { PaginationDto } from '../../@core/domain/basic/irepository';
+import { UpdateUserUseCase } from '../../@core/usecases/users/update-user';
 
 @Controller('users')
 export class UserController {
