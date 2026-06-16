@@ -8,7 +8,6 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // 🔹 NOVOS ESTADOS: Controle do Drawer e Formulário
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [categories, setCategories] = useState<any[]>([]);
   const [formLoading, setFormLoading] = useState(false);
@@ -41,7 +40,6 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
     }
   };
 
-  // 🔹 NOVA FUNÇÃO: Busca categorias para alimentar o Dropdown do formulário
   const carregarCategorias = async () => {
     try {
       const response = await api.get('/categories');
@@ -58,7 +56,6 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
     carregarCategorias();
   }, []);
 
-  // 🔹 NOVA FUNÇÃO: Manipula o envio do formulário para o Back-end
   const handleCreateProduct = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError('');
@@ -159,7 +156,6 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
           <h2>Estoque de Produtos</h2>
           <div className="action-buttons">
             <button className="btn-update" onClick={carregarProdutos}>🔄 Atualizar</button>
-            {/* 🔹 NOVO BOTÃO: Abre o fluxo de cadastro */}
             <button className="btn-add" onClick={() => setIsDrawerOpen(true)}>➕ Novo Produto</button>
           </div>
         </div>
@@ -184,7 +180,7 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
                   <th>Qtd em Estoque</th>
                   <th>Qtd Mínima</th>
                   <th>Status</th>
-                  <th>Ações</th> {/* 🔹 Nova coluna */}
+                  <th>Ações</th> 
                 </tr>
               </thead>
               <tbody>
@@ -208,7 +204,6 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
                           {product.active ? 'Ativo' : 'Inativo'}
                         </span>
                       </td>
-                      {/* 🔹 Novo campo com o botão de excluir */}
                       <td>
                         <button
                           className="btn-delete-table"
@@ -227,7 +222,7 @@ export default function Products({ onMudarTela }: { onMudarTela: (tela: string) 
         )}
       </main>
 
-      {/* 🔹 NOVO COMPONENTE: Drawer Lateral para Cadastro de Produtos */}
+
       {isDrawerOpen && (
         <div className="drawer-overlay" onClick={() => setIsDrawerOpen(false)}>
           <div className="drawer-content" onClick={(e) => e.stopPropagation()}>
