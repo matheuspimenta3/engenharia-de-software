@@ -191,3 +191,21 @@ O fluxo geral seguido foi:
 ## 14. Licença
 
 Este projeto está licenciado sob a licença MIT.
+
+# 🚀 Inicialização do projeto
+
+## Backend (NestJS)
+
+```bash
+npm install
+npm run build
+npm run start:dev
+```
+
+## Frontend (Vite)
+
+```bash
+npm install
+npm run dev
+```
+
